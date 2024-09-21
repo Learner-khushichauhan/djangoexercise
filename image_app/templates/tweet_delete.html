@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    tweet_delete
+{% endblock %}
+
+{% block content %}
+
+<h1 style=" text-align:center;margin:40px">Are you sure you want to delete the post ? </h1>
+<form method="post" style="text-align:center ; margin:40px">
+    {% csrf_token %}
+
+    <button type="submit" class="btn btn-primary btn-lg">  Delete  </button>
+    <a href="{% url 'list' %}" type="button" class="btn btn-secondary btn-lg">  Cancel  </a>
+
+</form>
+
+{% endblock %}
